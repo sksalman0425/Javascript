@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        // const car = {
+        //     name: "Fiat",
+        //     model: 800,
+        //     color: "Red"
+        // }
+        // console.log("Car object", car);
+        // console.log("Car Name::", car.name);
+        // console.log("Car Model::", car.model);
+        // console.log("Car Color::", car.color);
+
+        const cars = [
+            {
+                name: "Fiat",
+                model: 800,
+                color: "Red",
+                cylinder: [{
+                    o2: 20,
+                    name: "c1"
+                }, {
+                    o2: 30,
+                    name: "c2"
+                }, {
+                    o2: 40,
+                    name: "c3"
+                }],
+                weight: 345,
+                fullCarName: function () {
+                    return `${this.name} ${this.model}`
+                },
+            },
+            {
+                name: "Tata",
+                model: 345,
+                color: "Blue",
+                cylinder: [
+                    {
+                        o2: 2,
+                        name: "c1"
+                    }, {
+                        o2: 30,
+                        name: "c2"
+                    }, {
+                        o2: 40,
+                        name: "c3"
+                    }
+                ],
+                weight: 345,
+                fullCarName: function () {
+                    return `${this.name} ${this.model}`
+                },
+            },
+            {
+                name: "BMW",
+                model: 2400,
+                color: "Red",
+                cylinder: [{
+                    o2: 20,
+                    name: "c1"
+                }, {
+                    o2: 30,
+                    name: "c2"
+                }, {
+                    o2: 40,
+                    name: "c3"
+                }],
+                weight: 345,
+                fullCarName: function () {
+                    return `${this.name} ${this.model}`
+                },
+            }
+
+        ]
+        // const cars={
+        //     name:""
+        // }
+        console.log(cars[1].cylinder[1].name); // displays on console c2
+        console.log(cars[1].name); // displays on console Tata
+        console.log(cars[0].fullCarName()); // displays on console Started
+        let pTagElement = document.getElementById("demo");
+        for (let index = 0; index < cars.length; index++) {
+            console.log("Car single obj", cars[index]);
+            pTagElement.innerHTML = pTagElement.innerHTML
+                + cars[index].name + " " + cars[index].model + "<br/>"
+        }
+        // console.log("Typeof car array", typeof cars);
+        console.log("Typeof car array", typeof cars);
+        console.log(Array.isArray(cars));
+        console.log(cars instanceof Array);
+        // complexobj.batters.batter[1].type
+        const complexobj = {
+            "id": "0001",
+            "type": "donut",
+            "name": "Cake",
+            "ppu": 0.55,
+            "batters": {
+                "batter": [
+                    {
+                        "id": "1001",
+                        "type": "Regular"
+                    },
+                    {
+                        "id": "1002",
+                        "type": "Chocolate"
+                    },
+                    {
+                        "id": "1003",
+                        "type": "Blueberry"
+                    },
+                    {
+                        "id": "1004",
+                        "type": "Devil's Food"
+                    }
+                ]
+            },
+            "topping": [
+                {
+                    "id": "5001",
+                    "type": "None"
+                },
+                {
+                    "id": "5002",
+                    "type": "Glazed"
+                },
+                {
+                    "id": "5005",
+                    "type": "Sugar"
+                },
+                {
+                    "id": "5007",
+                    "type": "Powdered Sugar"
+                },
+                {
+                    "id": "5006",
+                    "type": "Chocolate with Sprinkles"
+                },
+                {
+                    "id": "5003",
+                    "type": "Chocolate"
+                },
+                {
+                    "id": "5004",
+                    "type": "Maple"
+                }
+            ]
+        };
+        console.log(complexobj.batters.batter[1].type);
+
+        pTagElement.innerHTML = pTagElement.innerHTML + " " + complexobj.batters.batter[1].type
+    </script>
+</body>
+
+</html>

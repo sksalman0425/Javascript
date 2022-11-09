@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array methods</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      const cars = [];
+      cars.push("BMW");
+      cars.push("TATA");
+      cars.push("MARUTI");
+      console.log("cars array contains following element", cars);
+      cars.pop(); //pop() removes the last element in the array here i.e. maruti
+      console.log("cars array contains following element after pop", cars);
+      cars.shift(); // shift() removes the first element in the array here i.e. BMW
+      console.log(
+        "cars array contains following element after pop and shift",
+        cars
+      );
+      let persons = [];
+      //by using push we can add object in the array
+      persons.push({ fName: "salman", lName: "shaikh", Age: 30 });
+      persons.push({ fName: "salma", lName: "shaikh", Age: 26 });
+      persons.push({ fName: "saleem", lName: "shaikh", Age: 32 });
+      persons.push({ fName: "sulieman", lName: "shaikh", Age: 33 });
+      console.log("persons array is ", persons);
+      persons.pop();
+      console.log("persons array is after pop method", persons);
+      persons.shift(); //removes the first element of array
+      console.log("persons array is after shift method", persons);
+      persons.unshift({ fName: "Azhar", lName: "shaikh", Age: 32 }); // add element at the first position
+      console.log("persons array is after unshift method", persons);
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      fruits.splice(2, 0, "Lemon", "Kiwi"); //add 2 element from position 2 and donot remove any element
+      console.log("fruits array after splice() is ", fruits);
+      const citrus = fruits.slice(1); // it slice fruit array from position of 1 to last
+      const newcitrus = fruits.slice(1, 4); //it slice fruit array from position 1 to 3 .i.e. 4th position not included
+      console.log("fruits array", fruits);
+      console.log("citrus array", citrus);
+      console.log("newcitrus array", newcitrus);
+    </script>
+  </body>
+</html>

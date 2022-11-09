@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript example</title>
+
+</head>
+<body>
+    <div>
+        Hi
+    </div>
+    <!-- <div id="first">
+
+    </div>
+    <div id="second">
+
+    </div> -->
+
+    <!-- Second example
+    <div id="first">
+
+    </div>
+    <div class="second">
+
+    </div> -->
+    <div>
+        Hello
+    </div>
+    <!-- <div id="example">
+
+    </div> -->
+     <!-- below example shows how inline javascript used without including script tag in code -->
+    <p id="p-font">
+        Hi changing font size via javascript
+    </p>
+    <button onclick="document.getElementById('p-font').style.fontSize='50px'">change font size</button>
+    <button onclick="document.getElementById('p-font').style.backgroundColor='red'">change backgroundColor</button>
+      <button onclick="document.querySelector('#p-font').style.fontSize='70px'">change font size</button>
+        <button onclick="document.querySelector('#p-font').style.backgroundColor='green'">change backgroundColor</button>
+    <!-- by semi colon we can change more than one properties -->
+    <button onclick="document.querySelector('#p-font').style.fontSize='100px';document.querySelector('#p-font').style.backgroundColor='yellow'">change font size and color</button>
+    
+
+    <button onclick="document.querySelector('#img_off').style.display='none'">Remove bulb</button>
+    <button onclick="document.querySelector('#img_off').style.display='inline'">Show bulb</button>
+
+    <button onclick='document.getElementById("img_off").src="pic_bulbon.gif"'>light bulb ON</button>
+    <img id="img_off" src="pic_bulboff.gif"/>
+    <button onclick='document.getElementById("img_off").src="pic_bulboff.gif"'>light bulb OFF</button> 
+   
+    <!-- <button onclick='document.querySelector("#example").innerHTML="from javascript ID"'>
+        click me
+    </button>
+    <!javascript run automatically run in browser -->
+    <!-- <script>
+        document.getElementById("first").innerHTML="from javascript"
+    </script> -->
+    <!-- second example -->
+        <!-- <script>
+            document.querySelector('#first').innerHTML="from javascript ID"
+            document.querySelector('.second').innerHTML="from javascript class"
+        </script> -->
+</body>
+</html>

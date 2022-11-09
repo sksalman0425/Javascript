@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Condition switch case</title>
+    <script>
+      function evalNumbers(op) {
+        const num1 = Number(document.getElementById("firstNumberId").value);
+        const num2 = Number(document.getElementById("secondNumberId").value);
+        let resultElement = document.getElementById("resultId");
+        switch (op) {
+          case "add"://it check add keyword then it execute code
+          case "plus":// it also check plus keyword then it execute code
+            // block of statement
+            resultElement.innerHTML = `Sum of ${num1} and ${num2} is ${
+              num1 + num2
+            }`;
+            console.log(`Sum of ${num1} and ${num2} is ${num1 + num2}`);
+            break;
+          case "subtract":
+            // block of statement
+            resultElement.innerHTML = `Difference of ${num1} and ${num2} is ${
+              num1 - num2
+            }`;
+            console.log(`Difference of ${num1} and ${num2} is ${num1 - num2}`);
+            break;
+          case "multiply":
+            // block of statement
+            resultElement.innerHTML = `Product of ${num1} and ${num2} is ${
+              num1 * num2
+            }`;
+            console.log(`Product of ${num1} and ${num2} is ${num1 * num2}`);
+            break;
+
+          case "divide":
+            // block of statement
+            resultElement.innerHTML = `Division of ${num1} and ${num2} is ${
+              num1 / num2
+            }`;
+            console.log(`Division of ${num1} and ${num2} is ${num1 / num2}`);
+            break;
+
+          case "modulus":
+            // block of statement
+            resultElement.innerHTML = `Modulus of ${num1} and ${num2} is ${
+              num1 % num2
+            }`;
+            console.log(`Modulus of ${num1} and ${num2} is ${num1 % num2}`);
+            break;
+          default:
+            resultElement.innerHTML = `${op} is an invalid operation`;
+            console.log(`${op} is an invalid operation`);
+            break;
+        }
+    }
+       
+    </script>
+  </head>
+  <body>
+    <p> Switch case is faster than if else statement and better formated code.<br>
+        Switch case is faster than if else because it does not check every condition, <br>
+        it directly goes to valide condition and execute it, otherwise it goes to default condition.
+    </p>
+    <input
+      id="firstNumberId"
+      type="number"
+      placeholder="Enter first Value"
+    /><br />
+    <input
+      id="secondNumberId"
+      type="number"
+      placeholder="Enter second Value"
+    /><br />
+    <button onclick="evalNumbers('add')">+</button>
+    <button onclick="evalNumbers('plus')">plus</button>
+    <button onclick="evalNumbers('subtract')">-</button>
+    <button onclick="evalNumbers('multiply')">*</button>
+    <button onclick="evalNumbers('divide')">/</button>
+    <button onclick="evalNumbers('modulus')">%</button>
+
+    <p id="resultId"></p>
+  </body>
+</html>

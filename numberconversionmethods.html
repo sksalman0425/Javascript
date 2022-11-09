@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Methods</title>
+</head>
+<body>
+   
+<p>Number() can be used to convert JavaScript variables to numbers:</p>
+        <h2>JavaScript Global Methods</h2>
+
+<p>The Number() method converts variables to numbers:</p>
+
+<p id="demo"></p>
+
+<script>
+    let x=Number.MAX_VALUE;
+    let y=Number.MIN_VALUE;
+document.getElementById("demo").innerHTML = 
+  Number(true) + "<br>" +
+  Number(false) + "<br>" +
+  Number("10") + "<br>" + 
+  Number("  10") + "<br>" +
+  Number("10  ") + "<br>" +
+  Number(" 10  ") + "<br>" +
+  Number("10.33") + "<br>" + 
+  Number("10,33") + "<br>" +
+  Number("10 33") + "<br>" +
+  Number("John")+ "<br>" +
+  Number(new Date("2022-10-26"))+ "<br>" + 
+  // epoch counter.it show milliseconds from 1970 till given date.
+  parseInt("-10") + "<br>" +
+  parseInt("-10.33") + "<br>" +
+  parseInt("10") + "<br>" +
+  parseInt("10.33") + "<br>" +
+  parseInt("10 6") + "<br>" +  
+  parseInt("10 years") + "<br>" +  
+  parseInt("years 10")+ "<br>" +  
+  parseFloat("10") + "<br>" +
+  parseFloat("10.33") + "<br>" +
+  parseFloat("10.33 6") + "<br>" +  
+  parseFloat("10 years") + "<br>" +
+  parseFloat("years 10")+ "<br>" +
+  x+ "<br>" +
+  y+ "<br>" ;   
+</script>
+
+   
+    
+</body>
+</html>

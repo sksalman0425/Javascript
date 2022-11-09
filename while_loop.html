@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while loop</title>
+</head>
+<body>
+    
+<h2>JavaScript While Loop. In while loop condition is check at the entry point.<br> i.e. if first condition is false it do not goes into loop</h2>
+
+ <p id="demo1"></p> <!--this tag should be outside of script tag. -->
+ <p id="demo2"></p>
+    <script>
+        //e.g without loop
+       const cars=["BMW","TATA","Tesla","Maruti"];
+       
+    //    let txt = cars[0]+"<br>";// for printing array value we have to write no. of lines
+    //    txt =txt+cars[1]+"<br>";// to avoid to write these repeatation of code we use loops
+    //    txt +=cars[2]+"<br>";
+    //    txt +=cars[3]+"<br>";
+    // example 1 using while loop for printing array's value
+       let txt3="";
+       let i=0;
+       while (i<cars.length){
+            txt3 +="<br> The car array's value are " +cars[i];
+            i++;
+       }
+       document.getElementById("demo1").innerHTML=txt3;
+  //  example 2 using while loop for printing first 25 number
+        let txt2="";
+        let i1=0;
+        while (i1<=25) {
+           txt2 +="<br> The number is "+i1;//shorthand operator bz of it result is added to previous result.
+           // txt2 += i1+",";// here values are seprated by comma
+            i1++;  
+        }
+        document.getElementById("demo2").innerHTML=txt2;
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects in HTML</title>
+    <script>
+        function displayobject() {
+            const person = {
+                firstName: "salman",
+                //lastName : "md",
+                "last Name": "shaikh", //here we are giving space in property name,
+                //to access this property we have to use square braket[] for accessing them.
+                // here we can not use person.last Name
+                age: 32,
+                todayDate:Date(),
+                //this is JS object which indicate firstName of this i.e.current object
+                // fullName is  called as method of the person object. fullName is anounymous function.
+                // i.e. function without name and it is generally assign to property or object   
+                fullName: function () {
+                    return this.firstName + " " + this["last Name"]
+                }
+            }
+            // document.getElementById("objId").innerHTML="first name is "+person.firstName +"<br>"+
+            //"last name is "+ person["last Name"]+"<br>"+ "And the Age is "+ person["age"]
+            //document.getElementById("objId").innerHTML="first name is "+person["firstName"] +"<br>"+
+            // "last name is "+ person["last Name"]+"<br>"+ "And the Age is "+ person["age"]
+            document.getElementById("objId").innerHTML =
+                // () is not given after fullName i.e. here we donot call it. then it's defination print
+                // "Name: " +person.fullName+"<br>"+
+                //" Age: " +person.age
+                "Name: " + person.fullName() + "<br>" +
+                " Age: " + person.age+ "<br>" +
+                "Today's date and time " + person.todayDate
+
+        }
+        function onTextBoxValueChange(){
+            console.log("on chage event is called");
+            document.getElementById("objId").innerHTML=document.getElementById("name").value
+            //or we can use as follows
+            // let paragraphId= document.getElementById("objId")
+            // let textBoxId=document.getElementById("name")
+            // paragraphId.innerHTML=textBoxId.value
+
+        }
+        function onTexBoxKeyPress(){
+            console.log("on key pressed event is called");
+            let paragraphId= document.getElementById("objId")
+            let textBoxId=document.getElementById("name")
+            paragraphId.innerHTML=textBoxId.value
+              
+        }
+       
+    </script>
+</head>
+<body>
+    <p id="objId"></p>
+    <input id="name" type="text" onkeypress="onTexBoxKeyPress()" onchange="onTextBoxValueChange()"
+    placeholder="enter your name">
+    <button onclick="displayobject()">show object</button>
+    
+    
+    
+</body>
+</html>

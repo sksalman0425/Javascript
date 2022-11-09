@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable demo</title>
+</head>
+<body>
+    <p id="demo-variable"> </p>
+    <button onclick="myFunction1()"> click me </button>
+    <script>
+            
+       //here declare and assignment of variable. var x=8, y=67;
+      // var x,y;// here we first declare variable and their scope is global bz they are in script tag not in function or bracket{}.
+       //x=6+7; //it is expression and we assign final value to variable
+       //y=x+70;
+       // document.getElementById("demo-variable").innerHTML=y;
+       var person2="salman";//global scope
+        let price1=70, price2=50;//global scope
+        let total=price1+price2;
+        let person='john',carName='volvo';//declare multiple variable in one line 
+        document.getElementById("demo-variable").innerHTML=total;
+        document.getElementById("demo-variable").innerHTML=total+" "+"person name "+person+" and its car Name "+carName;
+        // var barName ="Volvo";
+        // var barName;
+        // document.getElementById("demo-variable").innerHTML=barName;
+    // {
+    //     var x=10;// all these variable have block scope
+    // let y=5;
+    // const z=2
+
+
+    // }
+    
+    function myFunction1(){
+    var x=10;// all these variable have functional scope
+    // let y=5;
+    // const z=2
+    console.log("person var is ",person2);//here let variable have global scope bz we define it just after script tag
+    console.log("price1 is ",price1);
+    }
+    
+    console.log("person var is ",x);
+    
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting of Array</title>
+</head>
+<body>
+    <p id="demo1"> </p>
+    <p id="demo2"> </p>
+    <p id="demo3"> </p>
+    <p id="demo4"> </p>
+    <p id="demo5"> </p>
+    <p id="demo6"> </p>
+    <p id="demo7"> </p>
+    <p id="demo8"> </p>
+    <p id="demo9"> </p>
+    <p id="demo10"> </p>
+    <p id="demo11"> </p>
+    <p id="demo12"> </p>
+    <p id="demo13"> </p>
+    <p id="demo14"> </p>
+    <p id="demo15"> </p>
+    <p id="demo16"> </p>
+    <script>
+        // const fruits = ["Banana", "Orange", "Lemon", "Apple", "apple","Mango",1,true,false];// in boolean true and false are in small letter
+        //  fruits.sort();//it sort array in asending order. do not put no. in string and it modifies oringinal array
+        //    document.getElementById("demo1").innerHTML="sorted Array in asending order :: "+fruits;
+        // fruits.reverse();// it sort array in desending order
+        //     document.getElementById("demo2").innerHTML="Reverse Array in desending order  :: "+fruits;
+           const array1 =[100,3,2,1];
+            const array2 =["100","3","2",1];
+
+
+            // array1.sort();//do not put no.it do not give proper result
+            // document.getElementById("demo3").innerHTML="sorted Array without compare/Arrow function :: "+array1;
+            // document.getElementById("demo4").innerHTML="sorted Array in asending order with Arrow function ::"+array1.sort((a, b) => a - b);
+            // document.getElementById("demo5").innerHTML="sorted Array in desending order with Arrow function ::"+array1.sort((a, b) => b - a);
+            // console.log(
+            //     array1.sort((a, b) => a - b)
+            //     );//when only no. is given. it sort in asending order
+            // console.log(
+            //     array1.sort((a, b) => b - a)
+            //     );// in desending order
+            //array2.sort();
+            // document.getElementById("demo6").innerHTML="sorted array with no. as string"+array2.sort((a, b) => Number(a) - Number(b));
+            // document.getElementById("demo7").innerHTML="sorted array with no. as string"+array2.sort((a, b) => Number(b) - Number(a));
+            // console.log(
+            //     array2.sort((a, b) => Number(a) - Number(b))
+            //     );//when only no. but as a string, is given. it sort in asending order
+            // console.log(
+            //     array2.sort((a, b) => Number(b) - Number(a))
+            //     );
+            
+           // to find max value and min value from the array 
+            // const array3=[1,4,5,12,43,34,25,26,11];
+            // array3.sort((a,b)=> a-b);//asending order
+            // console.log("sorted array ::",array3);
+            // const maxValue=array3[array3.length-1];//finding max value
+            // document.getElementById("demo8").innerHTML=maxValue;
+           // console.log("max value ::",maxValue);
+            // const minValue=array3[0];//finding min value
+            // document.getElementById("demo9").innerHTML=minValue;
+           // console.log("min value ::",minValue);
+
+            //to find max value and min value from the array without sorting we can use inbuilt math() function
+            // const array4=[-1,4,5,12,55,34,25,26];
+            // const maxValue2=Math.max.apply(null,array4);
+            // document.getElementById("demo10").innerHTML=maxValue2;
+            // //console.log("max value without sorting ::",maxValue2);
+            // const minValue2=Math.min.apply(null,array4);
+            // document.getElementById("demo11").innerHTML=minValue2;
+           // console.log("min value without sorting ::",minValue2);
+            // Js arrays often contains objects as follows
+            const cars=[
+                {name:"TATA",type:"D",year:2015},
+                {name:"BMW",type:"B",year:2013},
+                {name:"MARUTI",type:"A",year:2020},
+                {name:"SUZUKI",type:"a",year:2019}
+            ];
+            // cars.sort((a,b) => a.year-b.year)//here we sort array using year property asending
+            // //document.getElementById("demo12").innerHTML="sorted cars according to year"+cars.sort((a,b) => a.year - b.year);//not working
+            // console.log("sorted cars according to year ::",cars);
+            // belowe we sort array using 'type' property in asending order
+            cars.sort((a, b)=>{
+                let x = a.type;
+                let y = b.type;
+                if (x < y) { return -1; }
+                if (x > y) { return 1; }
+                return 0;
+                });
+            console.log("sorted cars according to 'type' alphabetically according to ASCI value  ::",cars);
+
+    </script>
+</body>
+</html>

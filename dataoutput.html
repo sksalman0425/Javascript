@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different data display</title>
+</head>
+<body>
+    <h2> Hi This is Heading</h2>
+    <p id="demo1"> </p>
+    <p id="demo2"> </p>
+    <!-- <button onclick="document.getElementById('demo1').innerHTML=6+5">click me</button>
+    <button onclick="document.write(4+5)">click me</button>
+    <button onclick="window.alert('this is from alert')">click me</button>
+    <button onclick="console.log(9+8)">click me</button>
+     -->
+
+    <button onclick="myFunction()">click me1</button>
+    <button onclick="myFunction2()">click me2</button>
+    <script>
+       
+        function myFunction(){
+            var a, b, c;
+            a=4;
+            b=6;
+            c= add(a,b);//c=a+b;
+            console.log('the sum is c and element b, a are',c,b,a);
+            document.getElementById('demo1').innerHTML="first number is "+a+
+             "</br> second number is "+b+"</br> And their sum is " +c;
+        }  
+
+        function myFunction2(){
+            var x, y, z;
+            x=40;
+            y=61;
+            z= add(x,y);
+            console.log('the sum is z and element y, x are',z);
+            document.getElementById('demo2').innerHTML="first number is "+x+
+             "</br> second number is "+y+"</br> And their sum is " +z;
+        } 
+           
+        function add(x,y){
+            return x+y;
+        }
+
+
+    </script>
+</body>
+</html>

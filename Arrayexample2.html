@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array's</title>
+</head>
+<body>
+    <p id="demo"> </p>
+    <script>
+        //car1 is object
+        let car1={
+            name:"fiat",
+            model:800,
+            color:"Red"
+        }
+        // console.log("car1 object",car1);
+        // console.log("car1 object name",car1.name);
+        // console.log("car1 object model",car1.model);
+        // console.log("car1 object color",car1.color);
+        // to Make cars object in array is knwon as json
+        let cars=[
+            {
+                name:"fiat",
+                model:800,
+                color:"Red",
+                //here we take obj inside the array obj
+                //normally we have same properties  inside json for consistancy. 
+                //for just example we have taken obj inside array obj and for [0], [1] index we have taken array obj inside array obj
+                cylinder:{
+                    capacity:20,
+                    gas:"O2",
+                    name:"c1"
+                },
+                //function inside array obj
+                fullCarName : function () {
+                    return `${this.name} ${this.model}`
+                }
+            },
+            {
+                name:"tata",
+                model:500,
+                color:"white",
+                //array object inside array object
+                cylinder:[
+                    {
+                        o2:20,
+                        name:"c1"
+                    },
+                    {
+                        o2:40,
+                        name:"c2"
+                    },
+                    {
+                        o2:50,
+                        name:"43"
+                    }
+                ]
+            },
+            {
+                name:"renault",
+                model:400,
+                color:"blue",
+               //array object inside array object
+                cylinder:[
+                    {
+                        o2:10,
+                        name:"c1"
+                    },
+                    {
+                        o2:20,
+                        name:"c2"
+                    },
+                    {
+                        o2:30,
+                        name:"53"
+                    }
+                ]
+            }
+        ]
+        // console.log("cars first obj capacity",cars[0].cylinder.capacity);
+        // console.log("first obj full name",cars[0].fullCarName());
+        // console.log("cars 2nd obj's  3rd cylinder name",cars[1].cylinder[2].name);
+        // console.log("cars 3nd obj's  3rd cylinder name",cars[2].cylinder[2].name);
+         let pTagElement=document.getElementById("demo");
+
+        for (let index = 0; index < cars.length; index++) {
+                console.log("cars single object",cars[index]);
+                //here we have taken "= pTagElement.innerHTML +" to avoide overwritten of first.second and third text of "for" loop
+                pTagElement.innerHTML= pTagElement.innerHTML + cars[index].name+" "+ cars[index].model+"<br/>"
+            }
+            // typeof array's is object.
+            console.log("typeof of cars",typeof(cars));
+            //Array.isArray is function which check's object is array or not.
+            //if it is object then it return's true otherwise it return's false.
+            console.log(Array.isArray(cars));
+            //if it is object then it return's true otherwise it return's false.
+            console.log(cars instanceof Array );
+// here object->object->array->object
+//complexobj.batters.batter[1].type
+        const complexobj = {
+            "id": "0001",
+            "type": "donut",
+            "name": "Cake",
+            "ppu": 0.55,
+            "batters": {
+                "batter": [
+                    {
+                        "id": "1001",
+                        "type": "Regular"
+                    },
+                    {
+                        "id": "1002",
+                        "type": "Chocolate"
+                    },
+                    {
+                        "id": "1003",
+                        "type": "Blueberry"
+                    },
+                    {
+                        "id": "1004",
+                        "type": "Devil's Food"
+                    }
+                ]
+            },
+            "topping": [
+                {
+                    "id": "5001",
+                    "type": "None"
+                },
+                {
+                    "id": "5002",
+                    "type": "Glazed"
+                },
+                {
+                    "id": "5005",
+                    "type": "Sugar"
+                },
+                {
+                    "id": "5007",
+                    "type": "Powdered Sugar"
+                },
+                {
+                    "id": "5006",
+                    "type": "Chocolate with Sprinkles"
+                },
+                {
+                    "id": "5003",
+                    "type": "Chocolate"
+                },
+                {
+                    "id": "5004",
+                    "type": "Maple"
+                }
+            ]
+        };
+        //here we have to print batter array's 2nd object's type i.e. chocolate
+        console.log(complexobj.batters.batter[1].type);
+        //here we have taken "= pTagElement.innerHTML +" to avoide overwritten of text of complexobj 
+        pTagElement.innerHTML=pTagElement.innerHTML + " "+ complexobj.batters.batter[1].type
+
+    </script>
+</body>
+</html>

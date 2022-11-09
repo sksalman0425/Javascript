@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+    <script>
+         function myFunction(){
+            const  stringId = document.getElementById("strId").value;
+            document.getElementById("para").innerHTML="Input string's is : "+stringId+
+            "<br/>"+" And It's length is "+stringId.length;
+        }
+    </script>
+
+</head>
+<body>
+    <input id="strId" type="text" placeholder="enter your string">
+    <button onclick="myFunction()">show string</button>
+    <p id="para"></p>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For loop object</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+   <script>
+    let cars=[
+    {
+    name:"TATA",
+    model:10,
+    weight:150,
+    },
+    {
+    name:"BMW",
+    model:20,
+    weight:250,
+    },
+    {
+    name:"Maruti",
+    model:30,
+    weight:350,
+    },
+    {
+    name:"TATA",
+    model:10,
+    weight:150,
+    }
+    ];
+    let txt="";
+    for(i=0;i<cars.length;i++){
+        
+       // txt =txt + " All cars are "+cars[i].name+"<br>";
+        //txt =txt + " All cars are "+cars[i].model+"<br>";
+       // txt =txt + " All cars are "+cars[i].weight+"<br>";
+       //txt = txt + "Cars details are "+JSON.stringify(cars[i])+"<br>"; //using JSON.stringify()
+       txt += `Car ${i+1} : Name : ${cars[i].name} Model : ${cars[i].model}
+        Weight : ${cars[i].weight} <br>`; // using Regular Expresion .i.e backtik
+    }
+    document.getElementById("demo1").innerHTML=txt;
+     let txt2="";
+     for(j=0;j<=15;j++){
+       // txt2 =txt2 + "The number is "+j+",";
+      //  txt2 = txt2 + "The number is "+j+ "<br>";
+      txt2 +="The number is "+j+"<br>";
+      
+     }
+     document.getElementById("demo2").innerHTML=txt2;
+   </script> 
+    
+</body>
+</html>

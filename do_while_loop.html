@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>do while loop</title>
+</head>
+<body>
+    <h2>JavaScript do While Loop. In do while loop condition is check at the exit point <br> i.e. if first condition is false then also it execute block of code once</h2>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        //example 1 to print value of array
+        const cars=["BMW","TATA","Tesla","Maruti"];
+        let txt1="";
+        let i=0;
+        do {
+            txt1=txt1+ "The name of car is "+cars[i]+"<br>";
+            //txt1 += "The name of car is "+cars[i]+"<br>";
+            i++;
+        } while (i<cars.length);
+        document.getElementById("demo1").innerHTML=txt1;
+        //example 2 to print 1 to 25 number
+        let j=0;
+       // let j=30; // first condition is false then it print number is 30 and exit the loop.
+        let txt2="";
+        do {
+           txt2 = txt2+"The number is "+j+"<br>"; //or we can also write this code like below code
+           //txt2 += "The number is "+j+"<br>";
+            j++;
+        } while (j<=25);
+        document.getElementById("demo2").innerHTML=txt2;
+    </script>
+</body>
+</html>

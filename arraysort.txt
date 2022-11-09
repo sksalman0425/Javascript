@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array methods</title>
+</head>
+
+<body>
+    <p id="example1"></p>
+    <p id="result1"></p>
+
+    <p id="result2"></p>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango", "To", "zebra", "yes"];
+        document.getElementById("example1").innerHTML = fruits;
+        fruits.sort(); //sorts the array in asending order
+        // fruits.sort(function (a, b) { return a - b }); //asc
+        // fruits.sort()
+        document.getElementById("result1").innerHTML = "Sorted Array asc : " + fruits;
+        fruits.reverse(); // reverse for desending order
+        document.getElementById("result2").innerHTML = "Sorted Array desc : " + fruits;
+
+        // all values are numeric
+        const array = [4, 2, 5, 3, 100];
+        console.log(array.sort((a, b) => a - b)) // Asending
+        console.log(array.sort((a, b) => b - a)) // Desc
+
+        // all values are numeric but as string
+        const array1 = ['4', '2', 5, 3, '100']
+
+        console.log(
+            array1.sort((a, b) => Number(a) - Number(b)) // desc
+        )
+        console.log(
+            array1.sort((a, b) => Number(b) - Number(a)) // desc
+        )
+        // all values are numeric
+        const array3 = [4, 2, 5, 3, 100, 5354, 64, 5687, 3655];
+        array3.sort((a, b) => a - b) //Asending
+        console.log("Sorted array::", array3);
+        const maxValue = array3[array3.length - 1];
+        console.log("Max Value::", maxValue);
+        const minValue = array3[0];
+        console.log("Min Value::", minValue);
+
+        // without sorting an array find min and max value
+        const array4 = [4, 2, 5, 3, 100, 5354, 64, 5687, 3655];
+        const maxValue4 = Math.max.apply(null, array4)
+        console.log("maxValue4::", maxValue4);
+        const minValue4 = Math.min.apply(null, array4)
+        console.log("minValue4::", minValue4);
+
+        const cars = [
+            { name: "xyz", type: "Volvo", year: 2016 },
+            { name: "abc", type: "Saab", year: 2021 },
+            { name: "test", type: "BMW", year: 2010 }
+        ];
+        cars.sort((a, b) => b.year - a.year) //Asending
+        console.log("Cars array sorted by year::", cars);
+
+        cars.sort((a, b) => {
+            let x = a.type.toLowerCase();
+            let y = b.type.toLowerCase();
+            if (x < y) { return -1; }
+            if (x > y) { return 1; }
+            return 0;
+        });
+
+        console.log("Cars array sorted by type ::", cars);
+
+
+    </script>
+</body>
+
+</html>

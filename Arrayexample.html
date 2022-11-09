@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Example</title>
+</head>
+<body>
+    <h2>JavaScript Arrays</h2>
+
+<p id="demo"></p>
+
+<script>//index 0        1       2     3        4
+//const cars = ["Saab", "Volvo", "BMW","BMW","Renault"]; or other way to declare array is
+const cars =[];
+cars[0]="Saab";
+cars[1]="Volvo";
+cars[2]="BMW";
+cars[3]="BMW";
+cars[4]="Renault";
+document.getElementById("demo").innerHTML = cars + "<br>" +
+                                            cars.length + "<br>" +
+                                            cars[0]  + "<br>" +
+                                            cars[3].length + "<br>" +
+                                            cars[5];
+cars [0]="maruti";// changing content of array
+document.getElementById("demo").innerHTML=cars; //display on screen
+console.log(" cars array as a string ",cars.toString());  // display on console 
+console.log("typeOf cars array ", typeof cars); // type of array is object
+console.log("typeOf cars array ", typeof cars[0]);// type of array element is String  
+//const person1={fName:'salman', lName:'shaikh'};// one object
+//const person2={fName:'Azhar', lName:'muhhammed'};// second object
+
+const persons=[
+                {fName:'salman', lName:'shaikh'},
+                {fName:'Azhar', lName:'muhhammed'},
+                {fName:'Azhar2', lName:'muhhammed2'}
+                ];//array of objects
+            console.log("persons array length",persons.length);
+            console.log("persons array length",persons[persons.length-1]);//dynamically asseccing last element
+            console.log("0th position object of persons array ",persons[0]);//it gives 0th position object
+            console.log("0th position object's 1st element of persons array ",persons[0].fName);//it gives 0th position object's fisrt element
+            console.log("2th position object's 2nd element of persons array ",persons[2].lName);//it gives 0th position object's fisrt element
+
+
+
+</script>
+</body>
+</html>

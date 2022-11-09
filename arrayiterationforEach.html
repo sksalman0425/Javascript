@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array iteration/loops</title>
+  </head>
+  <body>
+    <h2>JavaScript Array.forEach()</h2>
+    <p>Calls a function once for each array element.forEach don't use return keyword.
+      it don't change array it only acces it</p>
+    <p id="demo"></p>
+    <script>
+      //const numbers = [45, 4, 9, 16, 25];
+      //const fruits = ["Banana", "Orange", "Lemon", "Apple", "apple","Mango",1,true,false];
+      const cars=[
+                {name:"TATA",type:"D",year:2015},
+                {name:"BMW",type:"B",year:2013},
+                {name:"MARUTI",type:"A",year:2020},
+                {name:"SUZUKI",type:"a",year:2019}
+            ];
+      let txt = "";
+      // numbers.forEach(myFunction);// Here we explicitly call the function
+      // function myFunction(value,index,array){
+      //   console.log("values by forEach loop",value,index,array);
+      //   txt= txt+value+"<br>";
+      //   //or you can use //txt=+value+"<br>";
+      // };
+      //document.getElementById("demo").innerHTML=txt;
+      //below we are using anounymous function i.e. no name of function for executing forEach loop
+      // numbers.forEach(function(value,index,array) {
+      //   console.log("value by forEach loop",value,index,array);
+      //   txt=txt+value+"<br>";
+      // });
+      //document.getElementById("demo").innerHTML=txt;
+      //normally we use Arrow function for executing forEach loop
+      //in Arrow function input values given in () and after that => sign used then {} used.
+      // numbers.forEach((value,index,array)=>{
+      //     console.log("",value,index,array);
+      //     txt=txt+value+"<br>";
+      // });
+      // fruits.forEach((value,index,array)=>{
+      //     console.log("",value,index,array);
+      //     txt=txt+value+"<br>";
+      // });
+      // cars.forEach((value,index,array)=>{
+      //     console.log("the name of car ::",value,index,array);
+      //     txt=txt+value.name+"<br>";
+      // });
+      //it will gives you objects name value 
+      // for printing whole array values we have to use JSON.stingify(value/item) method.
+      cars.forEach((value,index,array)=>{
+          console.log("the objects full values",value,index,array);
+          txt=txt+JSON.stringify(value)+"<br>";
+      });
+      document.getElementById("demo").innerHTML=txt;
+    </script>
+  </body>
+</html>

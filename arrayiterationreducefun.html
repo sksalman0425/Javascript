@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array iteration reduce function</title>
+</head>
+<body>
+    <h2>JavaScript Array.reduce()</h2>
+<p>This example finds the sum of all numbers in an array:
+     it takes four argument. we can give any name to arguments.
+    it start with 1st index  and in total it takes 1st value.
+    It return only one value.i.e. last one</p>
+
+<p id="demo"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+// let sum = numbers.reduce(myFunction);
+// let sum = numbers.reduce(myFunction,50);//here we have given initial value 50
+
+// document.getElementById("demo").innerHTML = "The sum is " + sum;
+
+// function myFunction(total, value, index, array) {
+//     console.log("Reduced parameters ::",total, value, index, array);
+//   return total + value;
+// };
+//by using anounymous function which is self invoke and value is given as initial value
+//  let sum1=numbers.reduce(function (total, value, index, array) {
+//    console.log("Reduced parameters ::",total, value, index, array);
+//   return total + value;
+//  },50);
+//  document.getElementById("demo").innerHTML = "The sum is " + sum1; 
+// by using arrow function which is self invoke and value is given as initial value
+ let sum1=numbers.reduce((total, value, index, array)=> {
+   console.log("Reduced parameters ::",total, value, index, array);
+  return total + value;
+ },50);
+ document.getElementById("demo").innerHTML = "The sum is " + sum1;
+
+</script>
+</body>
+</html>

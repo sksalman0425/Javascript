@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operator</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        let i=7;
+        i++ //i=i+1
+        console.log("value of i is",i);
+        i--;
+        console.log("value of i now after -- is",i);
+        x=17;
+        console.log("modular division by 4 is",x%4);
+        //let result=x%4;// it return the reminder
+        x+=5;//x=x+5 i.e. x=17+5
+        console.log("value of x after x+=y",x);
+        x-=7;//x=x-7
+        console.log("value of x after x-=y",x);
+        let text1='salman';
+        let text2='shaikh';
+        text3=text1 +" "+ text2;
+        console.log("my name is ",text3);
+        let txt1= "what a veyy nice";
+        txt1+=" day";
+        console.log(txt1);
+        // Js follows the BODMAS rule
+
+        // ! not oprater
+        // == comparsion oprater. it returns true or false
+        var p=100+3*50;
+        var q=(100+3)*50;
+        console.log(p);
+        console.log(q);
+        var r=(p==q)
+        //var s=!(p==q)
+        console.log(r);
+        console.log(" opposite to var r ",s=!(p==q));
+        // == does not check datatype of variable whereas === check datatype first if it does not matches then it return false value
+        // === opr is faster than ==.
+         let a=5;
+         let b=5;
+         let c="5";
+         console.log(" == operator output ",d=(a==b));
+         console.log(" == operator output for string ",e=(a===c));
+         console.log(" === operator output ",d=(a==b));
+         console.log(" === operator output for string ",e=(a===c));
+
+         // Bitwise operator AND, OR, XOR
+         let f=0;//0000
+         let g=5;// 1001
+         let j=1;//0001
+         let l=8;//1000
+         let n=-2;//10
+         let h= f & g;// it check only last digit of no. and then return true or false
+         let k= j&g;
+         let m=l&g;
+         let o=n&g;// it acts as subtraction
+         console.log("output of AND opr",h)
+         console.log("output of AND opr",f&&g);// logical opr are faster than bitwise opr
+         console.log("output of AND opr",k)
+         console.log("output of AND opr",m)
+         console.log("output of AND opr",o)
+         let name=null;
+         let txt4=undefined;
+         let txt5="missing";
+         let result=name??txt4;// ?? is called coalese opr. it return first value if first value is null or undefined otherwise it return next value i.e. 2nd or 3rd(if 2nd value also null or undefined)
+         console.log("the name is",result)
+         let result2=(name??txt4?? txt5 );
+         console.log("the name is",result2)
+        
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function evalNumbers(op) {
+        const num1 = Number(document.getElementById("firstNumberId").value);
+        const num2 = Number(document.getElementById("secondNumberId").value);
+        let resultElement = document.getElementById("resultId");
+        switch (op) {
+          case "add":
+            // block of statement
+            resultElement.innerHTML = `Sum of ${num1} and ${num2} is ${
+              num1 + num2
+            }`;
+            console.log(`Sum of ${num1} and ${num2} is ${num1 + num2}`);
+            break;
+          case "subtract":
+            // block of statement
+            resultElement.innerHTML = `Difference of ${num1} and ${num2} is ${
+              num1 - num2
+            }`;
+            console.log(`Difference of ${num1} and ${num2} is ${num1 - num2}`);
+            break;
+          case "multiply":
+            // block of statement
+            resultElement.innerHTML = `Product of ${num1} and ${num2} is ${
+              num1 * num2
+            }`;
+            console.log(`Product of ${num1} and ${num2} is ${num1 * num2}`);
+            break;
+
+          case "divide":
+            // block of statement
+            resultElement.innerHTML = `Division of ${num1} and ${num2} is ${
+              num1 / num2
+            }`;
+            console.log(`Division of ${num1} and ${num2} is ${num1 / num2}`);
+            break;
+
+          case "modulus":
+            // block of statement
+            resultElement.innerHTML = `Modulus of ${num1} and ${num2} is ${
+              num1 % num2
+            }`;
+            console.log(`Modulus of ${num1} and ${num2} is ${num1 % num2}`);
+            break;
+          default:
+            resultElement.innerHTML = `${op} is an invalid operation`;
+            console.log(`${op} is an invalid operation`);
+            break;
+        }
+
+        // if (op == "add") {
+        //   resultElement.innerHTML = `Sum of ${num1} and ${num2} is ${
+        //     num1 + num2
+        //   }`;
+        //   console.log(`Sum of ${num1} and ${num2} is ${num1 + num2}`);
+        // } else if (op == "subtract") {
+        //   resultElement.innerHTML = `Difference of ${num1} and ${num2} is ${
+        //     num1 - num2
+        //   }`;
+        //   console.log(`Difference of ${num1} and ${num2} is ${num1 - num2}`);
+        // } else if (op == "multiply") {
+        //   resultElement.innerHTML = `Product of ${num1} and ${num2} is ${
+        //     num1 * num2
+        //   }`;
+        //   console.log(`Product of ${num1} and ${num2} is ${num1 * num2}`);
+        // } else if (op == "divide") {
+        //   resultElement.innerHTML = `Division of ${num1} and ${num2} is ${
+        //     num1 / num2
+        //   }`;
+        //   console.log(`Division of ${num1} and ${num2} is ${num1 / num2}`);
+        // } else if (op == "modulus") {
+        //   resultElement.innerHTML = `Modulus of ${num1} and ${num2} is ${
+        //     num1 % num2
+        //   }`;
+        //   console.log(`Modulus of ${num1} and ${num2} is ${num1 % num2}`);
+        // } else {
+        //   console.log(`${op} is an invalid operation`);
+        // }
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      id="firstNumberId"
+      type="number"
+      placeholder="Enter first Value"
+    /><br />
+    <input
+      id="secondNumberId"
+      type="number"
+      placeholder="Enter second Value"
+    /><br />
+    <button onclick="evalNumbers('add')">+</button>
+    <button onclick="evalNumbers('subtract')">-</button>
+    <button onclick="evalNumbers('multiply')">*</button>
+    <button onclick="evalNumbers('divide')">/</button>
+    <button onclick="evalNumbers('modulus')">%</button>
+
+    <p id="resultId"></p>
+  </body>
+</html>

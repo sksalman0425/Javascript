@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+    <script>
+        function sliceTextBoxValue(){
+            let txt1Value=document.getElementById('txt1').value 
+            // document.getElementById("display1").innerHTML=
+            // txt1Value.length > 3 ? txt1Value.slice(0,3) : "Enter the character more than 3"
+            // document.getElementById("display1").innerHTML=
+            // txt1Value.length > 3 ? txt1Value.slice(3) : "Enter the character more than 3"
+            // document.getElementById("display1").innerHTML=
+            // txt1Value.length > 3 ? txt1Value.slice(-3) : "Enter the character more than 3"
+            // document.getElementById("display1").innerHTML=
+            //substring() is similar to slice().
+            //The difference is that start and end values less than 0 are treated as 0 in substring().
+            // txt1Value.length > 3 ? txt1Value.substring(0,3) : "Enter the character more than 3"
+            // document.getElementById("display1").innerHTML=
+            // txt1Value.length > 3 ? txt1Value.substring(-3) : "Enter the character more than 3"
+            // for getting only last three character's in substring()
+            // document.getElementById("display1").innerHTML=
+            // txt1Value.length > 3 ? txt1Value.substring(txt1Value.length-3) : "Enter the character more than 3"
+            //substr() is similar to slice().
+            //The difference is that the second parameter specifies the length of the extracted part.
+            //  document.getElementById("display1").innerHTML=
+            //  txt1Value.length > 3 ? txt1Value.substr(txt1Value.length-3,1) : "Enter the character more than 3"
+            //document.getElementById("display1").innerHTML=txt1Value.toUpperCase();
+            //document.getElementById("display1").innerHTML=txt1Value.toLowerCase();
+            
+
+
+        }
+        //let txt2="please visite microsoft ";
+       // let txt3="please visite  Microsoft and Microsoft";
+        //let newtxt2=txt2.replace("microsoft","azhar acadamy");
+        //let newtxt3=txt3.replace("Microsoft","azhar acadamy");
+        //let newtxt3=txt3.replace(/MICROSoft/i,"azhar acadamy");
+        //let newtxt3=txt3.replace(/Microsoft/g,"azhar acadamy");
+
+        //replace() is case sensitive and it replace fisrt instance.
+        //If you want to replace all matches, use a regular expression with the /g flag set. 
+        //To replace case insensitive, use a regular expression with an /i flag (insensitive):
+        //console.log("after replace :"newtxt2);
+        //console.log("after replace :",newtxt3);
+            // let numb=5;
+        // to convert number into string
+            // let text15=numb.toString();
+            // let padd=text15.padStart(8,"0");
+            // console.log("after padding number",padd); 
+            // let text16=" hi my name is salman";
+            //let char1=text16.charAt(7); 
+           // let char2=text16.charAt('charater at',text16[0],text16[3],text16[7]);
+            // console.log("after padding number",padd); 
+        //let text18= "Hi Hello World";
+        let text18= "Hi|Hello|World";
+        //let text18Array=text18.split('');
+        //let text18Array=text18.split(' '); here split is done by space
+        let text18Array=text18.split('|');// here split is done by | i.e. OR
+        // type of Array and null is object and type of undefined is undefined.
+        console.log("converted array is ",text18Array, typeof text18, typeof text18Array);
+
+        
+    </script>
+</head>
+<body>
+    <input id="txt1" type="text" placeholder="enter the string">
+    <button onclick="sliceTextBoxValue()">Slice</button>
+    <p id="display1"></p>
+    <p id="display2"></p>
+    <p id="display3"></p>
+    <p id="display4"></p>
+    <script>
+        // let text1 = "Hello";
+        //     let text2 = "World!";
+        //     let text3 = text1.concat(" ",text2," ","from Azhar Academy");
+        //    document.getElementById("display1").innerHTML = text3;
+        //     console.log(text3);
+        //     let text4 = "      Hello World?      ";
+        //     let text5 = text4.trim();
+        //     document.getElementById("display2").innerHTML = text5;
+        //     console.log(text5);
+        //     let text6 = "     Hello World!!     ";
+        //     let text7 = text6.trimStart();
+        //     document.getElementById("display3").innerHTML = text7; 
+        //     console.log(text7);
+        //     let text8 = "     Hello World??     ";
+        //     let text9 = text8.trimEnd();
+        //     document.getElementById("display4").innerHTML = text9;
+        //     console.log(text9);
+
+            // let num=6;
+            // let text10=numb.toString();
+            // let padded=text10.padStart(4,0);
+            // console.log("after padding number",padded);
+    </script>
+    
+</body>
+</html>

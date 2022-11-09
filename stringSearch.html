@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Search Methods</title>
+    <script>
+        function searchText(){
+                    let searchInputValue=document.getElementById("searchId").value;
+                    let pTagStringValue=document.getElementById("searchText").innerText;
+                    document.getElementById("resultId").innerHTML=
+                    //pTagStringValue.indexOf(searchInputValue);
+                    //pTagStringValue.indexOf(searchInputValue,15);
+                    //pTagStringValue.lastIndexOf(searchInputValue);
+                    //pTagStringValue.lastIndexOf(searchInputValue,100);
+                    //The lastIndexOf() method accepts a second parameter as the starting position for the search.
+                    //Remember that the lastIndexOf() method searches backwards, 
+                    //so position 15 means start the search at position 15, and search from 15 position to the beginning of string.
+                   //pTagStringValue.search(searchInputValue);
+                   //The search() method returns the position of the first occurrence of a specified text in a string:
+                   //The search() method cannot take a second start position argument.
+                    //The indexOf() method cannot take powerful search values (regular expressions).
+                   pTagStringValue.match(/searchInputValue/gi);
+        }
+    </script>
+</head>
+<body>
+    <input id="searchId" type="text" placeholder="enter text for searching"/>
+    <button onclick="searchText()">Search</button>
+    <p id="resultId"></p>
+    <p id="searchText">
+        JavaScript often abbreviated as JS, is a programming language 
+        that is one of the core technologies of the World Wide Web, alongside HTML and CSS.
+        As of 2022, 98% of websites use JavaScript on the client side for webpage behavior,
+        often incorporating third-party libraries. All major web browsers have a dedicated 
+        JavaScript engine to execute the code on users' devices.
+    </p>
+   
+</body>
+</html>
