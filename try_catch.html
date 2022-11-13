@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try catch example</title>
+</head>
+<body>
+    <!-- <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        try {
+            console.log(a);//a is not defined
+            let b=5/0;
+            if (b==Infinity){
+                console.log("throwing error Infinity");
+                throw " divide by zero is not allowed";
+               // throw " divide by zero is not allowed";
+            }
+        } catch (error) {
+            // console.log("errored occured in the code",error);
+            // document.getElementById("demo1").innerHTML=error.message;//error.message gives short error message and error.stack it gives full error message
+            console.log("errored occured in the code",error);
+            if(error.message.include("undefined")){
+                document.getElementById("demo1").innerHTML=`This is coding error.`;
+            }
+              
+        } finally{
+            document.getElementById("demo2").innerHTML="hello good afternoon";
+            //this code run irrespective of error occured or not.
+        }
+    </script> -->
+    <h2>JavaScript try catch</h2>
+
+    <p>Please input a number between 5 and 10:</p>
+    
+    <input id="demo" type="text">
+    <button type="button" onclick="myFunction()">Test Input</button>
+    
+    <p id="p01"></p>
+    
+    <script>
+    function myFunction() {
+      const message = document.getElementById("p01");
+      message.innerHTML = "";
+      let x = document.getElementById("demo").value;
+      try { 
+        if(x == "")  throw "is empty";
+        if(isNaN(x)) throw "is not a number";
+        x = Number(x);
+        if(x > 10)   throw "is too high";
+        if(x < 5)  throw "is too low";
+      }
+      catch(err) {
+        message.innerHTML = "Input " + err;
+      }
+      finally {
+        document.getElementById("demo").value = "";
+      }
+    }
+    </script>
+</body>
+</html>

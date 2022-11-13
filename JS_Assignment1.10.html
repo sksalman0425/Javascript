@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js_Assignment 1.10</title>
+</head>
+<body>
+    <p> Program to Identify number is positive or negative using if else.</p>
+    <input id="inputNo" type="number" placeholder="Enter the number " />
+    <button onclick="findNumber(inputNumber)">Submit</button>
+    
+    <p id="resultId"></p>
+    <script>
+        let inputNumber=document.getElementById('inputNo').value;// from this variable we are taking input value enter in textbox
+          function findNumber(x) {
+          let userinput=Number(document.getElementById("inputNo").value);
+          if (userinput>0) {
+            document.getElementById("resultId" ).innerHTML =`The number is Positive`;
+          } else if(userinput<0) {
+            document.getElementById("resultId" ).innerHTML =`The number is Negative`;
+          } else{
+            document.getElementById("resultId" ).innerHTML =`The number is equal to 0`;
+          } 
+         
+           
+          }
+        </script>
+
+</body>
+</html>

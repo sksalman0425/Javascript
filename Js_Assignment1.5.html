@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Assignment 1.5</title>
+</head>
+<body>
+    <P>Js program to join all array element into string.
+        The Array.toString() method returns a string with all array values separated by commas.
+        The join() method returns an array as a string.
+        The join() method does not change the original array.
+        Any separator can be specified. The default is comma (,).
+    </P>
+    <P id="resultId1"></P>
+    <P id="resultId2"></P>
+
+    <script>
+        const countries=["india","USA","England","5"];
+        let txt1=countries.toString();
+        let txt2=countries.join("+");
+        document.getElementById("resultId1").innerHTML=txt1;
+        document.getElementById("resultId2").innerHTML=txt2;
+
+    </script>
+</body>
+</html>

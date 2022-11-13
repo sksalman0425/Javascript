@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignment 1.2</title>
+    <h1> Calculate area of triangle whose sides are 5, 6, 7.</h1>
+</head>
+<body>
+    <p id="resultId"></p>
+    <script>
+        let a=5;
+        let b=6;
+        let c=7;
+        let s=(a+b+c)/2;// where s is semi-perimeter of triangle
+        let Area=Math.sqrt(s*(s-a)*(s-b)*(s-c));
+        document.getElementById("resultId").innerHTML="The area of triangle whose sides are 5, 6, 7 is "+Area;
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Assignment 1.9</title>
+  </head>
+  <body>
+    <p>Sum of "n" Natural Numbers using for loop</p>
+
+    <input id="inputNo" type="number" placeholder="Enter the number " />
+    <button onclick="findNumber(inputNumber)">Sum of numbers</button>
+    
+    <p id="resultId"></p>
+    <script>
+    let inputNumber=document.getElementById('inputNo').value;// from this variable we are taking input value enter in textbox
+      function findNumber(x) {
+        let sum=0;
+        let userinput =Number(document.getElementById("inputNo").value);//here we taking input value and convert it into number. 
+        // here we again taking input value bz in function outside variable not accesseble.
+        
+        for ( let i = 1; i <= userinput; i++) {
+
+          sum = sum + i;
+        }
+       
+      // console.log(sum);
+       document.getElementById("resultId" ).innerHTML =`The sum of first ${userinput} natural number is ${sum}`;
+      }
+    </script>
+  </body>
+
+
+
+</html>

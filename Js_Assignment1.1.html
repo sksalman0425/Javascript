@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Assignment</title>
+    <h1>The square of a number </h1>
+  </head>
+  <body>
+    <input id="inputNo" type="number" placeholder="Enter the number " />
+    <button onclick="findSquare(inputNumber)">Square </button>
+
+    <p id="resultId"></p>
+    <script>
+     let inputNumber = document.getElementById("inputNo").value;
+      function findSquare(x) {
+        const num1 = Number(document.getElementById("inputNo").value);
+        const square_number = num1 * num1;
+        document.getElementById("resultId").innerHTML
+         = `The square of ${num1} is ${square_number}`;
+      }
+    </script>
+  </body>
+</html>

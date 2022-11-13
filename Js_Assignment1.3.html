@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js assignment 1.3</title>
+</head>
+<body>
+    <h1> Multiplication and division of two input numbers</h1><br>
+    <input id="inputfirst" type="number" placeholder="input first number"/><br>
+    <input id="inputsecond" type="number" placeholder="input second number"/><br>
+    <button onclick="multi()">Multiplication</button>
+    <button onclick="division()">Division</button> <br>
+
+    <p id="multiplication"></p>
+    <p id="division"></p>
+    <script>
+        let firstNo=document.getElementById("inputfirst").value;
+        let secondNo=document.getElementById("inputsecond").value;
+        function multi(){
+            const num1=Number(document.getElementById("inputfirst").value);
+            const num2=Number(document.getElementById("inputsecond").value);
+            const multiply=num1 * num2;
+            document.getElementById("multiplication").innerHTML=
+            `The multiplication of ${num1} and ${num2} is ${multiply}`;
+        }
+        function division() {
+            const num1=Number(document.getElementById("inputfirst").value);
+            const num2=Number(document.getElementById("inputsecond").value);
+            const divide=num1/num2;
+            document.getElementById("division").innerHTML=
+            `The division of ${num1} and ${num2} is ${divide}`;
+            
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS assignment 1.6</title>
+</head>
+<body>
+    <h1>Swaping the two numbers</h1>
+    <p id="resultId1"></p>
+    <p id="resultId2"></p>
+    <script>
+        let a=35;
+        let b=10;
+        document.getElementById("resultId1").innerHTML=`The value of a is ${a} and value of b is ${b} `
+        let c=a;
+            a=b;
+            b=c;
+        document.getElementById("resultId2").innerHTML=`After swaping the value of a is ${a} and value of b is ${b} `;
+
+    </script>
+    
+</body>
+</html>
