@@ -13,12 +13,14 @@
       //   const lastName = person.lname;
       //   const firstName = person.fname;
       // The JavaScript for in statement loops through the properties of an Object:
-      for (let key in person) {
-        console.log("properties::", key);
-        // console.log("property Value",person.key);
-        console.log("property Value", person[key]);
-        for (const x in person[key]) {
-           console.log("Each",person[key][x]);
+      for (let i in person) {
+       // console.log("properties::", i);
+       // console.log("property Value", person[i]);
+       //console.log(i,person[i]);// this will seen in browser's console
+        // this will direct print obj properties and values on web page 
+       document.write(i+" : "+person[i]+ "<br>");
+        for (const x in person[i]) {
+           console.log("Each",person[i][x]);
         }
       }
     </script>
