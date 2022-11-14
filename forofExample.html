@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Of</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      //   const cars = ["BMW", "Maruti", "Renault"];
+      //   for (let index = 0; index < cars.length; index++) {
+      //     console.log("Values:", cars[index]);
+      //   }
+      const person = [
+        { fname: "John", lname: "Doe", age: 25, height: 4.7 },
+        { fname: "Azhar", lname: "Shaikh", age: 25, height: 4.7 },
+      ];
+
+      for (const iterator of person) {
+        console.log("Iterator", iterator);
+      }
+    </script>
+  </body>
+</html>

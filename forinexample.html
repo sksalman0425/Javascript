@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For In Example</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>    
+      const person = { fname: "John", lname: "Doe", age: 25, height: 4.7 };
+      //   const lastName = person.lname;
+      //   const firstName = person.fname;
+      // The JavaScript for in statement loops through the properties of an Object:
+      for (let key in person) {
+        console.log("properties::", key);
+        // console.log("property Value",person.key);
+        console.log("property Value", person[key]);
+        for (const x in person[key]) {
+           console.log("Each",person[key][x]);
+        }
+      }
+    </script>
+  </body>
+</html>
