@@ -7,7 +7,8 @@
     <title>For Of</title>
   </head>
   <body>
-    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
     <script>
       //   const cars = ["BMW", "Maruti", "Renault"];
       //   for (let index = 0; index < cars.length; index++) {
@@ -22,15 +23,23 @@
       for (const i of person) {
         console.log("object of Array", i);
       }
+      //next example of simple Array iterable of for of loop
+      const cars = ["BMW", "Volvo", "Mini"];
+      let text1 = "";
+      for (let x of cars) {
+        text1 += x + "<br>";
+      }
+      document.getElementById("demo1").innerHTML = text1;
+
       //next example of string iterable of for of loop
       let language = "JavaScript";
 
-      let text = "";
-      for (let x of language) {
-        text += x + "<br>";
+      let text2 = "";
+      for (let y of language) {
+        text2 += y + "<br>";
       }
 
-      document.getElementById("demo").innerHTML = text;
+      document.getElementById("demo2").innerHTML = text2;
     </script>
   </body>
 </html>
