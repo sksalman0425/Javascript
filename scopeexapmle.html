@@ -8,17 +8,30 @@
   </head>
   <body>
     <script>
-      // code here can NOT use carName
-      //   console.log("Car Name", carName);
-      myFunction();
+     
+      let carName = "Volvo";//this is global variable & can be used anywhere in program 
       console.log("Car Name", carName);
+      
+      myFunction();//here we call the function
+      
       function myFunction() {
-        let carName = "Volvo";
-
+        console.log("Car Name is in the function", carName);
         // code here CAN use carName
+        // Below variable is functional/local variable and it's scope is local or in function only
+        let bikeName ="Honda";
+        console.log("Bike name is in the function", bikeName);
+      
       }
-      //   console.log("Car Name", carName);
-      // code here can NOT use carName
+      {
+        let cycleName="Atlas";//this is block level variable & can not Access outside the block
+        console.log("Cycle name is in block level ",cycleName);
+      }
+      console.log("Car Name", carName);
+      // code here can use carName
+      // code here can not use bikeName bz it is local/functional variable
+      console.log("Bike name is at outside the function  ", bikeName);
+
+      console.log("Cycle name is at outside the block ",cycleName);
     </script>
   </body>
 </html>
