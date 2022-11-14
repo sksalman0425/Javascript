@@ -13,16 +13,24 @@
       //   for (let index = 0; index < cars.length; index++) {
       //     console.log("Values:", cars[index]);
       //   }
+      // example of array iterable of for of loop
       const person = [
         { fname: "John", lname: "Doe", age: 25, height: 4.7 },
         { fname: "Azhar", lname: "Shaikh", age: 25, height: 4.7 },
       ];
-      
 
       for (const i of person) {
-         console.log("object of Array", i);
+        console.log("object of Array", i);
       }
-    
+      //next example of string iterable of for of loop
+      let language = "JavaScript";
+
+      let text = "";
+      for (let x of language) {
+        text += x + "<br>";
+      }
+
+      document.getElementById("demo").innerHTML = text;
     </script>
   </body>
 </html>
