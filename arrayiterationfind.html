@@ -1,46 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array Find() method</title>
-</head>
-<body>
-    <h2>JavaScript Array.find()</h2>
-<p id="demo"></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array find() and findIndex() method</title>
+  </head>
+  <body>
+    <h2>JavaScript Array.find() and findIndex()</h2>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
 
-<script>
-const numbers = [40, 16, 5, 25, 29];
+    <script>
+      // const numbers = [4, 16, 5, 25, 29];
 
-//let first = numbers.find(myFunction);
+      // let first = numbers.find(myFunction);
 
-//document.getElementById("demo").innerHTML = "First number over 18 is " + first;
+      // document.getElementById("demo").innerHTML = "First number over 18 is " + first;
 
-// function myFunction(value, index, array) {
-//   return value > 18;
-// }
-// document.getElementById("demo").innerHTML = "First number under 18 is " + first;
-// function myFunction(value, index, array) {
-//   return value < 18;
-// };
+      // function myFunction(value, index, array) {
+      //   return value > 18;
+      // }
+      // document.getElementById("demo").innerHTML = "First number under 18 is " + first;
+      // function myFunction(value, index, array) {
+      //   return value < 18;
+      // };
+      //below variable contains array of object's
+      const cars = [
+        { name: "tata", year: 2000 },
+        { name: "maruti", year: 2002 },
+        { name: "Renault", year: 2005 },
+        { name: "figo", year: 2010 },
+      ];
+      // let findCarName=cars.find(myFunction2);
+      // document.getElementById("demo").innerHTML =
+      //   "car is present " + findCarName.name ;
+      // function myFunction2(value, index, array) {
+      //    //return value.name==='BMW'; // BMW is not present in array so it give output 'undefined'
+      //  //return value.name === "TATA"; // it is case sensitive so output is undefined
+      //   //return value.name==="figo";
+      //   return value.year > 2006;// it return first array element name that passes condition
+      // };
+      let findCarName2=cars.findIndex(myFunction4);
+      document.getElementById("demo3").innerHTML =
+        "car index is  " + findCarName2;
+      function myFunction4(value, index, array) {
+         //return value.name==="BMW"; // BMW is not present in array so it give output 'undefined'
+       //return value.name === "Tata"; // it is case sensitive so output is -1
+        //return value.name==="figo";// it returns figo element's index i.e. 3
+       return value.year > 1999;// it return first array element index  that passes condition i.e. 0
+      };
 
-const cars=[{name:"tata",year:2000},
-            {name:"maruti",year:2002},
-            {name:"Renault",year:2005},
-            {name:"figo",year:2010}
-            ];
-let findBMW=cars.find(myFunction2);
-document.getElementById("demo").innerHTML = "BMW car is " + findBMW.name;
-function myFunction2(value,index,array){
-    return cars.name==BMW;
-};
-// const filtercars=cars.filter(myFun3);
-// document.getElementById("demo").innerHTML = "BMW car is " + filtercars.year;
-//  function myFun3(value,index,array){
-//    return value.year>2000
-//     };
-</script>
-
-</body>
+  
+    </script>
+  </body>
 </html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Class and fuctions are similar-
+      // Class is the blueprint of an Object
+      // Constructor is a
+      // fuction used for initialization of the
+      // variables of the class
+      class Car {
+        constructor(name, year) {
+          this.name = name;
+          this.year = year;
+        }
+        start() {
+          console.log("Car Started");
+        }
+        stop() {
+          console.log("Car Stopped");
+        }
+        age(x) {
+          return x - this.year;
+        }
+      }
+
+      //   JSON object
+      //   let person = {
+      //     firsName: "Azhat",
+      //     lastName: "Shaikh",
+      // below is object's function/method. 
+      //     fullName: () => {
+      //       return this.firsName + " " + this.lastName;
+      //     },
+      //   };
+
+      // Object in terms of Class is the instance of a class
+      // We use new keyword to create an instance of a class
+      let date = new Date();//date() is inbuilt class given by JS & by using  new keyword we creating it's object.
+      let currentYear = date.getFullYear();//getFullYear() is Date class method/function which are we calling. 
+
+      let car1 = new Car("Maruti", 2000);
+      car1.start();
+      console.log("Name::", car1.name);
+      console.log("Year::", car1.year);
+      const ageCar1 = car1.age(currentYear);
+      console.log("Age of car 1 is ::", ageCar1);
+      let car2 = new Car("Maruti1", 2002);
+      car2.start();
+      const ageCar2 = car2.age(currentYear);
+      console.log("Age of car 2 is ::", ageCar2);
+    </script>
+  </body>
+</html>
