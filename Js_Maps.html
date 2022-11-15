@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Maps</title>
+</head>
+<body>
+    <h2>JavaScript Map Objects</h2>
+<p>1. Using Map.forEach():</p>
+<p>2. Using Map.entries():</p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+
+<script>
+// Create a Map
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+// Set Map Values
+fruits.set("mango", 400);
+fruits.set("watermelon", 600);
+fruits.set("chilli",100)
+
+//The set() method can also be used to change existing Map values:
+fruits.set("oranges", 250);
+
+//The get() method gets the value of a key in a Map:
+document.getElementById("demo1").innerHTML="Changed value of oranges "+fruits.get("oranges");
+
+//The size property returns the number of elements in a Map:
+document.getElementById("demo2").innerHTML="size of Map before delete "+fruits.size;
+
+//The delete() method removes a Map element:
+fruits.delete("chilli");
+//The has() method returns true if a key exists in a Map otherwise it returns false.
+document.getElementById("demo3").innerHTML = fruits.has("apples");
+
+document.getElementById("demo4").innerHTML = fruits.has("chilli");
+
+let text1 = "";
+fruits.forEach (function(value, key) {
+  text1 += key + ' = ' + value + "<br>"
+})
+document.getElementById("demo5").innerHTML ="Using Map.forEach(): <br> "+ text1;
+
+let text2 = "";
+for (const x of fruits.entries()) {
+  text2 += x + "<br>";
+}
+
+document.getElementById("demo6").innerHTML ="Using Map.entries(): <br>"+ text2;
+</script>
+
+</body>
+</html>
