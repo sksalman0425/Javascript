@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js sets example</title>
+</head>
+<body>
+    <h2>JavaScript Sets</h2>
+<p>forEach() calls a function for each element:</p>
+<p>by using for of loop we can Iterate Set values:</p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<script>
+// Create a Set
+const letters = new Set(["a","b","c"]);
+
+// Create Variables
+const d = "d";
+const e = "e";
+
+
+// Add the Variables to the Set
+letters.add(d);
+letters.add(e);
+letters.add("f");
+letters.delete(d)
+// List all Elements
+let text1 = "";
+letters.forEach (function(value) {
+  text1 += value + "<br>";
+})
+//orrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+// List all Elements
+let text2 = "";
+for (const x of letters.values()) {
+ text2 += x + "<br>";
+}
+
+document.getElementById("demo1").innerHTML ="Using forEach()"+ text1;
+document.getElementById("demo2").innerHTML = 
+"size of set is "+letters.size;
+// remember here for length of array .size property is used not .length property
+document.getElementById("demo3").innerHTML ="using for of loop"+ text2;
+document.getElementById("demo4").innerHTML = 
+"size of set is "+letters.size;
+//document.getElementById("demo5").innerHTML=letters.has();// false is returning ???
+</script>
+    
+</body>
+</html>
