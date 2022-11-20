@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring,Spread operator and Rest</title>
+  </head>
+  <body>
+    <script>
+        // const PI = Math.PI;// Math is object and it's property is PI.
+        // const E = Math.E;// exponantial value
+        // const SQRT2 = Math.SQRT2;// square root of 2
+        //  console.log(PI, E, SQRT2);
+      // This is Object Destructuring . below line is equivalent to above three line
+      const { PI, E, SQRT2 } = Math;
+      // here make sure Math.PI and variable name PI is same this is knwon as object destructuring
+      
+      // below we define areaCircle function
+      // const areaCircle=(circle)=>{
+      //   return PI*circle.radius*circle.radius;
+        //orrrrr we can also write
+        // const radius=circle.radius;
+        // return PI*radius*radius;
+      //}
+      // below we destructure the circle object, here also whole object passed
+      // but automatically it destructure properties of object and used only radius property bz of which our code is short and efficient
+      //  const areaCircle = ({radius})=>{
+      //    return PI* radius*radius;
+      //  }
+      const areaCircle = ({ radius }, { precision = 2 } = {}) => {
+        
+        return (PI * radius * radius).toFixed(precision);
+      };
+     
+      // below is circle object
+      const circle = {
+        radius: 4,
+        name: "SmallCircle",
+        color: "red",
+      };
+     
+      // below we call circle function
+      const area = areaCircle(circle);// here we passes whole circle object with all it's properties but we required only radius property
+      console.log("Area of circle is ::", area);
+
+      const person = {
+        fname: "Salman",
+        lname: "Shaikh",
+        age: 31,
+        height: "5.9",
+      };
+
+      //   const age = person.age;
+      //   const fname = person.fname;
+      // Destructuring of object's properties i.e. if variable name and property name is same then it automatically check person object and assign person.age to age variable and person.fname to fname variable
+      const { age, fname } = person;
+      console.log(age, fname);// here we do not need to write object.property every time
+      // optional argument means giving default values to function argument if argument's value is not passed when calling the function.
+      //Arrow Function  
+      const add1 = (a = 2, b = 7) => {
+          return a + b;
+        };
+        //normal function
+          function add2(a = 5, b = 1) {
+            return a + b;
+          }
+        const v1 = 3,
+          v2 = 5;
+        const addition1 = add1();// here arguments value is not passed then function uses it's default argument value
+        const addition2=add1(v1);//here only one arg value passed then for 2nd arg it takes default value
+        const addition3=add1(v1,v2);// here both arg value passed
+        console.log("ADD returned", addition1);
+        console.log("ADD returned", addition2);
+        console.log("ADD returned", addition3);
+        const addition4 = add2();// here arguments value is not passed then function uses it's default argument value
+        const addition5=add2(v1);//here only one arg value passed then for 2nd arg it takes default value
+        const addition6=add2(v1,v2);
+        console.log("ADD returned", addition4);
+        console.log("ADD returned", addition5);
+        console.log("ADD returned", addition6);
+
+      const arr = [1, 5, 6, 89, 5, 7, 8987];
+      //   const [, second, , fourth] = arr;
+      //   console.log(first, second, fourth);
+
+      // the new variable i.e numberArr has all the rest items i.e Rest operator in the arr variable
+      // Rest items stored in new array with the help of (... i.e. three dots) spread operator.
+      const [first, second, ...numberArr] = arr;
+      console.log(first, second, numberArr);
+        //shallow copying of array
+        const newArray= arr;
+        newArray.push(50);// changes done in both array because values of old array are not copy in new array only reference is given to new array
+        console.log("new Array ::",newArray,"Old Array ::",arr);
+        // Deep copying of array using spread operator
+        const newArray2= [...arr];
+        newArray2.push(143);// changes done in only new array because values of old array are  copy in new array using spread operator.
+        console.log("new Array ::",newArray2,"Old Array ::",arr);
+    </script>
+  </body>
+</html>
