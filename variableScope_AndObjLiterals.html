@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Scope and Object Literals</title>
+</head>
+<body>
+    <p id="demo"> By using object literals we can add dynamic property in object</p>
+    <script>
+        // global variable 
+        let p=9;
+        var q=6;
+        const r=18;
+        {
+            var a=5;// block scope include {}, if(){},for(){}
+            let b=6;
+        }
+  //  console.log(a);
+  //  console.log(b);// it gives error bz let is not accessible outside block scope
+ const addition=sum();
+    function sum(){
+        var x=10;
+        let y=8;
+    };
+  //  console.log(x); // it shows error bz we access variable outside functional scope 
+   // console.log(y); // it shows error bz we access variable outside functional scope 
+     p=19; //  we can reassign value to let global variable 
+     q=12; // we can reassign value to var global variable 
+   //  r=15; // we can't reassign value to const global variable
+    console.log(p);
+    console.log(q);
+    //console.log(r);  
+    // in case of const obj and array we can change them by adding new element in array 
+    //and by adding new properties and methods in objects 
+    const array1=[1,2,3];
+    array1.push(8);
+    console.log(array1);
+    // In above array element we have added one element value i.e. 8
+    const personObj={
+        fName:"salman",
+        lName:"shaikh",
+        age:31
+    };
+    console.log(personObj);
+    personObj.fName="iqbal";
+    personObj.age=37;
+    console.log(personObj);
+    // In Above Object we have changed value of fName and age
+        const answer='hand';
+        const person={
+            fName:'salman',
+            lName:'shaikh',
+            [answer]:'Right',// the property in [] is knwon as dynamic property and this concept is knwon as object literals
+        };
+        
+        console.log(person.answer);//this shows answer is undefined
+        console.log(person.hand);// this gives answer is 'Right'. here we dynamically changed property from answer to hand
+    </script>
+    
+</body>
+</html>
