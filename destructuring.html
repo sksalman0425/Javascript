@@ -28,8 +28,9 @@
       //  const areaCircle = ({radius})=>{
       //    return PI* radius*radius;
       //  }
-      const areaCircle = ({ radius }, { precision = 2 } = {}) => {
-        
+      //here { precision = 2 } = {} is set because if we don't pass second arg then it will not give error and default precision value 2 is taken
+      const areaCircle = ({ radius }, { precision = 2 }={} ) => {
+        //return (PI * radius * radius).toFixed(2);//it gives 2 digit after point
         return (PI * radius * radius).toFixed(precision);
       };
      
@@ -41,8 +42,13 @@
       };
      
       // below we call circle function
-      const area = areaCircle(circle);// here we passes whole circle object with all it's properties but we required only radius property
-      console.log("Area of circle is ::", area);
+      const area1 = areaCircle(circle);// here we passes whole circle object with all it's properties but we required only radius property
+      console.log("Area of circle is ::", area1);
+      // if { precision = 2 } = {} is not set then we have to pass atleast {} in 2nd arg then it will gives area with 2 digit after point
+      // const area2 = areaCircle(circle,{});
+      // console.log("Area of circle is ::", area2);
+      const area3 =areaCircle(circle,{precision:6});// here we passes precision value 5
+      console.log("Area of circle is ::", area3);
 
       const person = {
         fname: "Salman",
@@ -57,6 +63,7 @@
       const { age, fname } = person;
       console.log(age, fname);// here we do not need to write object.property every time
       // optional argument means giving default values to function argument if argument's value is not passed when calling the function.
+      // if you don't give default value to arg and don't pass value during function call then it will shows result NaN.
       //Arrow Function  
       const add1 = (a = 2, b = 7) => {
           return a + b;
