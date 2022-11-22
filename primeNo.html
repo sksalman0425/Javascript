@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number</title>
+</head>
+<body>
+    <h1> Findout given number is prime or not</h1>
+    <input id="inputNo" type="number" placeholder="Enter the number " />
+    <button onclick="findPrime()">Prime no.</button>
+
+    <p id="resultId"></p>
+    <script>
+        function findPrime() {
+          let num1 = Number(document.getElementById("inputNo").value);
+          var isPrime = true;
+          if (num1==1){
+            document.getElementById("resultId").innerHTML="Number is neither prime nor composite."
+          }else if(num1>1){
+
+            for(let i =2;i<num1;i++){
+            if(num1%2==0){
+                isPrime=false;
+                break;
+            }
+          }
+          if(isPrime){
+            document.getElementById("resultId").innerHTML=`The given number ${num1} is Prime number`;
+          }
+          else{
+            document.getElementById("resultId").innerHTML=`The given number ${num1} is not Prime number`;
+          }
+          }else if(num1==0){
+            document.getElementById("resultId").innerHTML=`The given number ${num1} is neither Prime nor composite`;
+          }else{
+            document.getElementById("resultId").innerHTML=`The given number ${num1} is negative number which can't be Prime number`;
+          }
+ 
+        }
+      </script>
+</body>
+</html>
