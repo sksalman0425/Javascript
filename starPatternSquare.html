@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Pattern for square</title>
+</head>
+<body>
+    <h1>Star Pattern for square</h1>
+   
+    <input id="rowsNo" type="number" placeholder="Enter the no. of row of square"/>
+    <button onclick="squarePattern()"> Click me</button>
+    <p id="resultId"></p>
+    <script>
+
+        function squarePattern(){
+            let rowsNo=Number(document.getElementById("rowsNo").value);
+            let string="";
+           if(rowsNo==0){
+            document.getElementById("resultId").innerHTML=`The given row is zero so star pattern is not possible`;
+           }else if(rowsNo<0){
+            document.getElementById("resultId").innerHTML=`Star Pattern is not possible for negative number`;
+           } else{
+            for( let i=0;i<rowsNo;i++){
+                for(let j=0;j<rowsNo;j++){
+                    string=string+"*";
+                }
+                string =string+"<br/>";
+
+            }
+        document.getElementById("resultId").innerHTML=`The star Pattern for given rows ${rowsNo} is <br/> ${string} `;
+            }
+        };
+
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hollow Star Pattern for square</title>
+  </head>
+  <body>
+    <h1>Hollow Star Pattern for square</h1>
+
+    <input
+      id="rowsNo"
+      type="number"
+      placeholder="Enter the no. of row of square"
+    />
+    <button onclick="hollowSquarePattern()">Click me</button>
+    <p id="resultId"></p>
+    <script>
+      function hollowSquarePattern() {
+        let rowsNo = Number(document.getElementById("rowsNo").value);
+        let string = "";
+        if (rowsNo == 0) {
+          document.getElementById(
+            "resultId"
+          ).innerHTML = `The given row is zero so Hollow star pattern is not possible`;
+        } else if (rowsNo < 0) {
+          document.getElementById(
+            "resultId"
+          ).innerHTML = `Hollow Star Pattern is not possible for negative number`;
+        } else {
+          for (let i = 0; i < rowsNo; i++) {
+            // external loop
+            for (let j = 0; j < rowsNo; j++) {
+              // internal loop
+              if (i === 0 || i === rowsNo - 1) {
+                string += "*";
+              } else {
+                if (j === 0 || j === rowsNo - 1) {
+                  string += "*";
+                } else {
+                  string += " ";
+                }
+              }
+            }
+            // newline after each row
+            string += "<br/>";
+          }
+          // printing the string
+         // console.log(string);
+          document.getElementById(
+            "resultId"
+          ).innerHTML = `The Hollow Star Pattern is <br/> ${string}`;
+        };
+      };
+    </script>
+  </body>
+</html>
