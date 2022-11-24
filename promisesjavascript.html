@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises in Javascript</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        // pending,Fulfilled Rejected
+        let mypromise1 = new Promise(function (resolve, reject) {
+            // "Producing Code" (May take some time)
+            resolve(""); // when successful
+            reject("")   // when error
+        });
+
+        // "Consuming Code" (Must wait for a fulfilled Promise)
+        mypromise1.then(function (result) {
+            console.log("result");
+        }, function (error) {
+            console.log("Error");
+        })
+
+        const myPromise = new Promise(function (myResolve, myReject) {
+            try {
+                setTimeout(function () { myResolve("I love You !!"); }, 3000);
+            } catch (error) {
+                myReject(error)
+            }
+
+        });
+        console.log("Promise object status::", myPromise);
+        myPromise.then(function (value) {
+            console.log("Value:::", value);
+            document.getElementById("demo").innerHTML = value;
+        }, function (error) {
+            console.log("error:::", error);
+        });
+
+
+        let myPromise3 = new Promise(function (myResolve, myReject) {
+            let req = new XMLHttpRequest();
+            req.open('GET', "strings.html");
+            req.onload = function () {
+                if (req.status == 200) {
+                    myResolve(req.response);
+                } else {
+                    myReject("File not Found");
+                }
+            };
+            req.send();
+        });
+        async function myPromise4(myResolve, myReject) {
+            let req = new XMLHttpRequest();
+            req.open('GET', "variable.html");
+            req.onload = function () {
+                if (req.status == 200) {
+                    myResolve(req.response);
+                } else {
+                    myReject("File not Found");
+                }
+            };
+            req.send();
+        };
+
+        myPromise3().then(
+            function (value) {
+                console.log("Promise 3 Value", value);
+                myPromise4.then(function (valuePromise4) {
+                    console.log("valuePromise4 3 Value", valuePromise4);
+                })
+            },
+            function (error) { console.log("Rejected due to error", error); }
+        )
+    </script>
+
+</body>
+
+</html>
