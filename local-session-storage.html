@@ -42,6 +42,11 @@ console.log(Arr)
 sessionStorage.setItem('sessionName', 'sHarry');
 sessionStorage.setItem('sessionName2', 'sRohan');
 sessionStorage.setItem('sessionSabzi', JSON.stringify(impArray));
+
+// cookies
+document.cookie='lname=azhar2';// expire date is not set here
+document.cookie='fname=azhar; expire=' + new Date(9999,0,1).toUTCString()
+console.log(document.cookies);
     </script>
     
 </body>
