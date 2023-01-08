@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local and Session Storage</title>
+</head>
+<body>
+    <h1>Local and Session Storage</h1>
+    <script>
+        let impArray = ['adrak', 'pyaz', 'bhindi'];
+
+// Add a key-value pair inside local Storage 
+//and we can see it in browser(right click on browser=> inspect=> apllication tab)
+localStorage.setItem('Name1', 'Harry');
+localStorage.setItem('Name2', 'Rohan');
+localStorage.setItem('Name3', 'Salman');
+// duplicate key-value pair shown at only once.
+localStorage.setItem('Name3', 'Salman');
+
+// localStorage.setItem('Sabzi', impArray);
+// for storing array we have to convert it into string thats why we used JSON.stringify()
+localStorage.setItem('Sabzi', JSON.stringify(impArray));
+
+// Clears the entire local storage i.e. All key value pair
+// localStorage.clear();
+
+// Clear a particular key-value pair
+localStorage.removeItem('Name');
+
+// Retrieve an item from the local Storage
+//we can see it in browser(right click on browser=> inspect=> console tab)
+  let name3 = localStorage.getItem('Name3');
+  console.log(name3)
+//when key-value pair is not present then it shows null when we console particular key.
+//for retrieving value of array as Array (not as string), we use JSON.parse().
+Arr = JSON.parse(localStorage.getItem('Sabzi'));
+console.log(Arr)
+//all methods for localstoeage and session storage are same
+//session storage store key-value is for particular session of tab. when tab is closed all data wiped out. 
+sessionStorage.setItem('sessionName', 'sHarry');
+sessionStorage.setItem('sessionName2', 'sRohan');
+sessionStorage.setItem('sessionSabzi', JSON.stringify(impArray));
+    </script>
+    
+</body>
+</html>
