@@ -43,7 +43,8 @@ sessionStorage.setItem('sessionName', 'sHarry');
 sessionStorage.setItem('sessionName2', 'sRohan');
 sessionStorage.setItem('sessionSabzi', JSON.stringify(impArray));
 
-// cookies
+// cookies are employed to store user choices i.e. browsing history
+// whereas cache is employed to store the website content i.e. HTML pages, images,audio etc for long run.
 document.cookie='lname=azhar2';// expire date is not set here
 document.cookie='fname=azhar; expire=' + new Date(9999,0,1).toUTCString()
 console.log(document.cookies);
